@@ -1,0 +1,25 @@
+<div class="jumbotron jumbotron-fluid">
+	<div class="container-fluid">
+		<h1 class="display-4">Meet our store</h1>
+		<p class="lead">You will find best offers for your lovely pet.</p>
+	</div>
+</div>
+<div class="container row row-cols-1 row-cols-md-3 mx-auto">
+	<div class="col mb-4" *ngFor="let product of products; index as productId">
+		<div class="card" >
+			<img src="/assets/img/{{product.image}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">
+					<a [routerLink]="['/products', productId]">
+						{{ product.name }}
+					</a>
+				</h5>
+				<p class="card-text">Description: {{product.description}}</p>
+			</div>
+			<div class="card-footer">
+				<small class="text-muted"><span class="bv-rating-stars-on bv-rating-stars bv-width-from-rating-stats-90" aria-hidden="true">  ★★★★★  </span></small>
+			</div>
+		</div>
+	</div>
+</div>
+

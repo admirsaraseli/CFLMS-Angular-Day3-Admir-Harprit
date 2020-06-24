@@ -1,0 +1,49 @@
+<div class="jumbotron jumbotron-fluid">
+	<div class="container-fluid">
+		<h1 class="display-4">Meet our store</h1>
+		<p class="lead">You will find best offers for your lovely pet.</p>
+	</div>
+</div>
+<p class="h4 mb-4" *ngIf="total > 0">The items that you want to buy: </p>
+<div class="row row-cols-1 row-cols-md-3">
+	<div class="col mb-4" *ngFor="let item of items">
+		<div class="card" >
+			<div class="card-body">
+				<h5 class="card-title">{{ item.name }}</h5>
+				<h4>{{ item.price | currency }}</h4>	
+			</div>	
+		</div>
+	</div>
+</div>
+<h2 class="text-dark" *ngIf="total >= 0">Total: {{total | currency}} </h2>
+<div class="container mx-auto mt-4 bg-transparent px-4 py-4">
+	<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+		<div class="form-row mb-4 mx-auto">
+			<div class="col-3 ">
+				<label>First Name:</label>
+				<input class="form-control" type="text" formControlName="firstName">
+		 	</div>
+		 	<div class="col-3 ">
+				<label>Last Name:</label>
+				<input class="form-control" type="text" formControlName="lastName">
+			</div>
+			<div class="col-3 ">	
+	    		<label>Email:</label>
+				<input class="form-control" type="email" formControlName="email">
+			</div>
+		</div>
+
+		<div class="form-row mb-4 mx-auto">
+			<div class="col-4 ">
+				<label>Address:</label>
+				<input class="form-control" type="text" formControlName="address">
+			</div>
+			<div class="col-4 ">
+				<label>Phone Number:</label>
+				<input class="form-control" type="text" formControlName="telnumber">
+			</div>
+		</div>
+
+		<input type="submit" class="btn btn-danger" value="Submit">
+	</form>
+</div>
