@@ -1,0 +1,14 @@
+<h2>Products</h2>
+
+<div *ngFor="let x of products ; index as productId">
+
+ <h4>
+    <a [routerLink]="['/products', productId]">
+     {{ x.name }}
+    </a>
+ </h4>
+    <p *ngIf="x.description">
+        Description: {{x.description}}
+    </p>
+
+</div>
