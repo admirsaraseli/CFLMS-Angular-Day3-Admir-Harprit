@@ -19,27 +19,27 @@
 <div class="container mx-auto mt-4 bg-transparent px-4 py-4">
 	<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 		<div class="form-row mb-4 mx-auto">
-			<div class="col-3 ">
-				<label>First Name:</label>
+			<div class="col-2 ">
+				<label class="font-weight-bold">First Name:</label>
 				<input class="form-control" type="text" formControlName="firstName">
 		 	</div>
-		 	<div class="col-3 ">
-				<label>Last Name:</label>
+		 	<div class="col-2 ">
+				<label class="font-weight-bold">Last Name:</label>
 				<input class="form-control" type="text" formControlName="lastName">
 			</div>
-			<div class="col-3 ">	
-	    		<label>Email:</label>
+			<div class="col-2 ">	
+	    		<label class="font-weight-bold">Email:</label>
 				<input class="form-control" type="email" formControlName="email">
 			</div>
 		</div>
 
 		<div class="form-row mb-4 mx-auto">
-			<div class="col-4 ">
-				<label>Address:</label>
+			<div class="col-3 ">
+				<label class="font-weight-bold">Address:</label>
 				<input class="form-control" type="text" formControlName="address">
 			</div>
-			<div class="col-4 ">
-				<label>Phone Number:</label>
+			<div class="col-2 ">
+				<label class="font-weight-bold">Phone Number:</label>
 				<input class="form-control" type="text" formControlName="telnumber">
 			</div>
 		</div>
