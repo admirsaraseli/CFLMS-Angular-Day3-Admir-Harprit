@@ -1,0 +1,17 @@
+
+
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559_960_720.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">Product Details</h2>
+
+      <div *ngIf="product">
+        <h3>{{ product.name }}</h3>
+        <h5>{{ product.price | currency }}</h5>
+        <p>{{ product.description }}</p>
+        <button (click)="addToCart(product)" class="btn btn-primary">Buy</button>
+       </div>
+    </div>
+  </div>
